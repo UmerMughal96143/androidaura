@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div>
@@ -18,13 +18,19 @@ const Header = () => {
                                     <i class="fas fa-search"></i>
                                 </li>
                                 <li className="nav-item active">
-                                    <a className="nav-link" href="#">Home</a>
+                                    <Link to='/' class='nav-link'>
+                                        HOME
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">About</a>
+                                    <Link to='/about' class='nav-link'>
+                                        About
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Contact Us</a>
+                                    <Link to='/ContactUs' class='nav-link'>
+                                     Contact Us
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -10,11 +11,31 @@ const Footer = () => {
                             <div className="col-lg-3 col-md-6 col-12">
                                 <h4 className="footer-heading">ABOUT US</h4>
                                 <ul>
-                                    <li><a href="">Compuny</a></li>
-                                    <li><a href="">Careers</a></li>
-                                    <li><a href="">Privacy Policy</a></li>
-                                    <li><a href="">Cookies Policy</a></li>
-                                    <li><a href="">Turm of use</a></li>
+                                    <li>
+                                        <Link to='/'>
+                                            Compuny
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/'>
+                                            Careers
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/PrivacyPolicy'>
+                                            Privacy Policy
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/'>
+                                            Cookies Policy
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/TurmOfUse'>
+                                            Turm of use
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="col-lg-6 col-md-6 col-12">
