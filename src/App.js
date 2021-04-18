@@ -20,10 +20,10 @@ function App() {
         <Route exact path='/' component={Landing} />
         <Route path='/about' component={AboutUs} />
         <Route path='/ContactUs' component={ContactUs} />
-        <Route path='/blog' component={Blog} />
+        <Route path='/android' component={Blog} />
         <Route path='/PrivacyPolicy' component={PrivacyPolicy} />
         <Route path='/TurmOfUse' component={TurmofUse} />
-        <Route path='/SetupReactNative' component={BlogTwo} />
+        <Route path='/react-native' component={BlogTwo} />
       </Switch>
       <Footer/>
     </Router>

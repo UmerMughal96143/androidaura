@@ -19,28 +19,20 @@ const Landing = () => {
                 </div>
             </div>
             <div className="home-page-content">
-                <div className="home-page-content-container">
+                <div className="home-page-content-container Latest-Courses-wrapper">
                     <h5>Latest <span>Courses</span></h5>
-                    <div className="Courses-wrapper">
+                    <div className="Courses-wrapper Latest-Courses">
                         <div className="Courses-image">
-                            <img src="/asstes/image/header-image.jpg"/>
-                            <p>Kotlin</p>
+                            <a href="android">
+                                <img src="/asstes/image/android.png"/>
+                                <p>Android</p>
+                            </a>
                         </div>
                         <div className="Courses-image">
-                            <img src="/asstes/image/header-image.jpg"/>
-                            <p>Kotlin</p>
-                        </div>
-                        <div className="Courses-image">
-                            <img src="/asstes/image/header-image.jpg"/>
-                            <p>Kotlin</p>
-                        </div>
-                        <div className="Courses-image">
-                            <img src="/asstes/image/header-image.jpg"/>
-                            <p>Kotlin</p>
-                        </div>
-                        <div className="Courses-image">
-                            <img src="/asstes/image/header-image.jpg"/>
-                            <p>Kotlin</p>
+                            <a href="react-native">
+                                <img src="/asstes/image/logo-react.png"/>
+                                <p>React Native</p>
+                            </a>
                         </div>
                     </div>
                 </div>

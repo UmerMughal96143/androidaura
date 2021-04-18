@@ -6,7 +6,7 @@ const Header = () => {
             <header>
                 <div className="header-container">
                     <nav className="navbar navbar-expand-lg navbar-light p-0">
-                        <a className="navbar-brand site-logo" href="#">
+                        <a className="navbar-brand site-logo" href="/">
                             <img src="asstes/image/logo.png" />
                         </a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

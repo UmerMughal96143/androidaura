@@ -157,6 +157,9 @@ header{
 .home-page-search-wrapper{
     margin-top: -110px;
 }
+.home-page-content .Latest-Courses-wrapper{
+    padding-bottom: 0px;
+}
 .home-page-content-container{
     padding: 80px 30px;
 }
@@ -184,6 +187,7 @@ header{
     background-color: white;
 }
 .Courses-image p{
+    color: black;
     margin: 10px 0px;
     font-family: "Roboto-Medium";
 }
@@ -195,6 +199,15 @@ header{
 .Courses-wrapper{
     display: flex;
 }
+.Courses-wrapper.Latest-Courses .Courses-image {
+    margin: 0 10px;
+}
+.Courses-wrapper.Latest-Courses {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
 /* blog */
 .blog{
     padding: 50px 0px
@@ -373,7 +386,6 @@ body .table-heading{
     }
     .Courses-wrapper {
         display: flex;
-        flex-wrap: wrap;
     }
     .home-page-content-container {
         padding: 20px 30px;
@@ -398,7 +410,6 @@ body .table-heading{
     }
     .Courses-wrapper {
         display: flex;
-        flex-wrap: wrap;
     }
     .populer-Courses {
         width: 100%;
@@ -514,7 +525,6 @@ body .table-heading{
     }
     .Courses-wrapper {
         display: flex;
-        flex-wrap: wrap;
     }
     .home-page-content-container {
         padding: 20px 20px;
