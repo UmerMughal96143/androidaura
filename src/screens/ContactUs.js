@@ -22,11 +22,11 @@ const ContactUs = () => {
                     <div className="contact-form-container">
                         <form>
                             <div class="form-row mb-3">
-                                <div class="col">
+                                <div class="col-md-6 col-12">
                                     <label for="exampleFormControlTextarea1">Name</label>
                                     <input type="text" class="form-control"/>
                                 </div>
-                                <div class="col">
+                                <div class="col-md-6 col-12">
                                     <label for="exampleFormControlTextarea1">E-mail</label>
                                     <input type="text" class="form-control"/>
                                 </div>

@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import Blog from './screens/Blog';
 import PrivacyPolicy from './screens/PrivacyPolicy';
 import TurmofUse from './screens/TurmofUse';
+import BlogTwo from './screens/BlogTwo';
+// import Front from './screens/BlogTwo';
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path='/blog' component={Blog} />
         <Route path='/PrivacyPolicy' component={PrivacyPolicy} />
         <Route path='/TurmOfUse' component={TurmofUse} />
+        <Route path='/SetupReactNative' component={BlogTwo} />
       </Switch>
       <Footer/>
     </Router>
