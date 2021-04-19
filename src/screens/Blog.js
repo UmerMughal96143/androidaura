@@ -2364,12 +2364,66 @@ const Blog = () => {
                       <p>
                       In the given example below we will use one button. We will call method to display alert dialog box. Dialog box will open with message “Hello this is AlertDialog – Press OK to close”. Once you click on  “OK” button than dialog box will dismiss. Here we use dialog.cancel() method to dismiss the dialog window.
                       </p>
-                      <h3 className="tab-seaction-heading subminheading">
+                      <h5 className="tab-seaction-heading subminheading">
                       Example of Alert Dialog box in android
-                      </h3>
-                      <p>
-                        CODE
-                      </p>
+                      </h5>
+                      <div className="code-section">
+                        <code>
+                          {` // MainActivity.java `}
+                          <br />
+                          <br />
+                          {` package com.androidaura.alertdialog; `}
+                          <br />
+                          <br />
+                          {`import androidx.appcompat.app.AlertDialog;`}
+                          <br />
+                          {` import androidx.appcompat.app.AppCompatActivity; `}
+                          <br />
+                          {` import android.content.DialogInterface; `}
+                          <br />
+                          {` import android.os.Bundle; `}
+                          <br />
+                          <br />
+                          {` public class MainActivity extends AppCompatActivity { `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp;{`@Override`}
+                          <br />
+                          &nbsp; &nbsp; &nbsp;{`protected void onCreate(Bundle savedInstanceState) { `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{` super.onCreate(savedInstanceState); `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{` setContentView(R.layout.activity_main); `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{` displayalert(); `}
+                          <br />
+                          {`}`}
+                          <br />
+                          <br />
+                          {`public void displayAlert() {`}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{` new AlertDialog.Builder(MainActivity.this) `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` .setTitle("Title") `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` .setMessage("Hello this is AlertDialog - Press OK to close") `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` .setPositiveButton("OK", new DialogInterface.OnClickListener() { `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`public void onClick(DialogInterface dialog, int id) { `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`dialog.cancel(); `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`} `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` }).show(); `}
+                          <br  />
+                          &nbsp; &nbsp;{` } `}
+                          <br />
+                          {` } `}
+                        </code>
+                      </div>
                       <p class="blog-img" >
                         <img src="asstes/image/alertdialog-1.png" style={{ width:"auto"}} />
                       </p>
@@ -2377,15 +2431,57 @@ const Blog = () => {
                       <p>
                         In the second example we will ask user to select their gender. Here we will use two buttons Positive and Negative. Once user clicks on Positive button than “Male” selected Toast occurs and if users clicks on Negative button than “Female” selected message will
                       </p>
-                      <p>
-                        CODE
-                      </p>
+                      <div className="code-section">
+                        <code>
+                          {`public void displayalert() {`}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{` new AlertDialog.Builder(MainActivity.this) `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{` .setTitle("Title") `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{` .setMessage("Gender ?") `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{` //.setIcon(R.drawable.image) `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{` .setPositiveButton("Male", `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{` new DialogInterface.OnClickListener() { `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;{` public void onClick(DialogInterface dialog, int id) { `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` Toast.makeText(MainActivity.this,"Male Selected",Toast.LENGTH_SHORT).show(); `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` dialog.cancel(); `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` } `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;{` }) `}
+                          <br />
+                          {`.setNegativeButton("Female", new DialogInterface.OnClickListener() {`}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` public void onClick(DialogInterface dialog, int id) { `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` Toast.makeText(MainActivity.this,"Female Selected",Toast.LENGTH_SHORT).show(); `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` dialog.cancel(); `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` } `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp;{`}).show(); `}
+                          <br />
+                          {` } `}
+                        </code>
+                      </div>
                       <p>
                         <b>Output</b>
                       </p>
-                      <p class="blog-img" >
-                        <img src="asstes/image/alertdialog-2.png" style={{ width:"auto"}} />
-                      </p>
+                      <div className="centered-images">
+                        <p class="blog-img" >
+                          <img src="asstes/image/alertdialog-2.png" style={{ width:"auto"}} />
+                        </p>
+                      </div>
                       <p>
                         <h5 className="tab-seaction-heading subminheading">
                         Custom AlertDialog in android
@@ -2394,9 +2490,61 @@ const Blog = () => {
                       <p>
                         In this example we will show how to use Custom Alert Dialog box. We are using EditText and Button inside Alert Box. Once user input the text and clicks on button, Toast message will be displayed.
                       </p>
-                      <p>
-                        CODE
-                      </p>
+                      <div className="code-section">
+                        <code>
+                          {`// MainActivity.java`}
+                          <br />
+                          <br />
+                          {` package com.androidaura.customalert; `}
+                          <br />
+                          <br />
+                          {` import android.app.AlertDialog; `}
+                          <br />
+                          {` import android.os.Bundle; `}
+                          <br />
+                          {` import android.view.View; `}
+                          <br />
+                          {` import android.widget.Button; `}
+                          <br />
+                          {` import android.widget.EditText; `}
+                          <br />
+                          {` import android.widget.Toast; `}
+                          <br />
+                          <br />
+                          {` import androidx.appcompat.app.AppCompatActivity; `}
+                          <br />
+                          <br />
+                          {` public class MainActivity extends AppCompatActivity { `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;{` Button btn; `}
+                          <br />
+                          &nbsp; &nbsp;{` @Override `}
+                          <br />
+                          &nbsp; &nbsp;{` protected void onCreate(Bundle savedInstanceState) { `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{` super.onCreate(savedInstanceState); `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{` btn = findViewById(R.id.btn); `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{` btn.setOnClickListener(new View.OnClickListener() { `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{` @Override `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{` public void onClick(View v) { `}
+                          <br />
+                          <br />
+                          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;{` showAlertDialog(); `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` } `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp;{`}); `}
+                          <br />
+                          {` } `}
+                        </code>
+                      </div>
                       <p>
                         <b>Output</b>
                       </p>

@@ -227,7 +227,13 @@ body .blog .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     padding: 15px 13px;
     margin: 2px 0px;
     font-family: "Roboto-Medium";
-    background-color: #1fff1f;
+    background-color: transparent;
+    border-bottom: 1px solid;
+    border-style: dashed;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0px;
 }
 .blog .nav-link:hover{
     color: #fff;
