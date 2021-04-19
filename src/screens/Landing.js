@@ -8,14 +8,14 @@ const Landing = () => {
                     <div className="col-12 header-image-heading-wrapper">
                         <h1 className="header-image-heading">You are browsing the best resource <br /> for <span>Online Education</span></h1>
                     </div>
-                    <div className="col-12 home-page-search-wrapper">
+                    {/* <div className="col-12 home-page-search-wrapper">
                         <form className="Newsleter-form home-page-search">
                             <input className="form-control" type="search" placeholder="Search here" />
                             <div className="search-icon">
                                 <i class="fas fa-search"></i>
                             </div>
                         </form>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="home-page-content">
@@ -67,5 +67,4 @@ const Landing = () => {
         </div>
     )
 }
-
 export default Landing

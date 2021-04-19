@@ -285,13 +285,21 @@ body .blog .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
 }
 /* blog */
 /* Blog 2 */
+.code-section{
+    background-color: #FAFAFA;
+    white-space: nowrap;
+    padding: 30px 40px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    overflow: auto;
+}
 .code-scroll{
     overflow: auto;
     white-space: nowrap;
 }
 .code-commend{
     background-color: #efefef;
-    padding: 0px 15px;
+    padding: 10px 15px;
 }
 .code-commend span{
     color: #dd4a68;

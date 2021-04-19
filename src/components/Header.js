@@ -14,9 +14,9 @@ const Header = () => {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ml-auto">
-                                <li>
+                                {/* <li>
                                     <i class="fas fa-search"></i>
-                                </li>
+                                </li> */}
                                 <li className="nav-item active">
                                     <Link to='/' class='nav-link'>
                                         HOME

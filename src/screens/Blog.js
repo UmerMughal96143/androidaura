@@ -1453,13 +1453,76 @@ const Blog = () => {
                       <p>
                         <b>MainActivity.java</b>
                       </p>
-                      <b>CODE</b>
+                      <div className="code-section">
+                        <code>
+                          {`package com.androidaura.helloworld; }`}
+                          <br />
+                          <br />
+                          {`import android.support.v7.app.AppCompatActivity;`}
+                          <br />
+                          {`public class MainActivity extends AppCompatActivity {`}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;{`@Override`}
+                          <br />
+                          &nbsp; &nbsp;{`    protected void onCreate(Bundle savedInstanceState) {`}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{`super.onCreate(savedInstanceState);`}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{`setContentView(R.layout.activity_main);`}
+                          <br />
+                          &nbsp; &nbsp; {`}`}
+                          <br />
+                          {`}`}
+                          <br />
+                        </code>
+                      </div>
                       <p>
                         This is activity_main.xml file, here we will write code
                         rated to xml. Below we are using TextView widget and
                         will display Hello World! message. activity_main.xml
                       </p>
-                      <p>CODE</p>
+                      <div className="code-section">
+                        <code>
+                          {`<?xml version="1.0" encoding="utf-8"?> }`}
+                          <br />
+                          {`<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"`}
+                          <br />
+                          &nbsp; &nbsp;{` xmlns:app="http://schemas.android.com/apk/res-auto" `}
+                          <br />
+                          &nbsp; &nbsp;{` xmlns:tools="http://schemas.android.com/tools" `}
+                          <br />
+                          &nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;{` android:layout_height="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;{` tools:context=".MainActivity"> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp; {`<TextView`}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` android:layout_width="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` android:text="Hello World!" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` android:textSize="30sp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` android:textStyle="bold" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` app:layout_constraintBottom_toBottomOf="parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` app:layout_constraintLeft_toLeftOf="parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` app:layout_constraintRight_toRightOf="parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` app:layout_constraintTop_toTopOf="parent" /> `}
+                          <br />
+                          {` </android.support.constraint.ConstraintLayout> `}
+                          <br />
+                        </code>
+                      </div>
                       <p>
                         Press run button to run you application as shown below
                       </p>
@@ -2026,7 +2089,141 @@ const Blog = () => {
                       <h3 className="tab-seaction-heading">
                         TextView in Android Example
                       </h3>
-                      CODE
+                      <div className="code-section">
+                        <code>
+                          {` // Set text for text view }`}
+                          <br />
+                          <br />
+                          {`//XML`}
+                          <br />
+                          {`<TextView`}
+                          <br />
+                          {`android:layout_width="wrap_content"`}
+                          <br />
+                          {`android:layout_height="wrap_content"`}
+                          <br />
+                          {`android:text="Android Aura"/>`}
+                          <br />
+                          <br />
+                          {`//JAVA `}
+                          <br />
+                          {`TextView tv = findViewById(R.id.tv);`}
+                          <br />
+                          {`tv.setText("Android Aura");`}
+                          <br />
+                        </code>
+                      </div>
+                      <div className="code-section">
+                        <code>
+                          {` //Set Text Size`}
+                          <br />
+                          <br />
+                          {`//XML`}
+                          <br />
+                          {`<TextView android:id="@+id/tv"`}
+                          <br />
+                          {`android:layout_width="wrap_content"`}
+                          <br />
+                          {`android:layout_height="wrap_content"`}
+                          <br />
+                          {`android:textSize="22sp"`}
+                          <br />
+                          {`android:text="Android Aura"/>`}
+                          <br />
+                          <br />
+                          {`//JAVA `}
+                          <br />
+                          {`TextView tv = findViewById(R.id.tv);`}
+                          <br />
+                          {`tv.setText("Android Aura"); `}
+                          <br />
+                          {`tv.setTextSize(22); `}
+                          <br />
+                        </code>
+                      </div>
+                      <div className="code-section">
+                        <code>
+                          {` //Set Text Color`}
+                          <br />
+                          <br />
+                          {`//XML`}
+                          <br />
+                          {`android:textColor="#1C83EA"`}
+                          <br />
+                          {` android:textColor="@color/colorAccent" `}
+                          <br />
+                          <br />
+                          {`//JAVA `}
+                          <br />
+                          {` TextView tv = findViewById(R.id.tv); `}
+                          <br />
+                          {` tv.setText("Android Aura");  `}
+                          <br />
+                          {` tv.setTextSize(22); `}
+                          <br />
+                        </code>
+                      </div>
+                      <div className="code-section">
+                        <code>
+                          {` //Set Text Color`}
+                          <br />
+                          <br />
+                          {`//XML`}
+                          <br />
+                          {` android:background="#F7DC6F" `}
+                          <br />
+                          <br />
+                          {`//JAVA `}
+                          <br />
+                          {` tv.setBackgroundColor(Color.parseColor("#F7DC6F")); `}
+                          <br />
+                        </code>
+                      </div>
+                      <div className="code-section">
+                        <code>
+                          {` // Text all CAPS`}
+                          <br />
+                          <br />
+                          {`//XML`}
+                          <br />
+                          {` android:textAllCaps="true" `}
+                          <br />
+                          <br />
+                          {`//JAVA `}
+                          <br />
+                          {` tv.setAllCaps(true); `}
+                          <br />
+                        </code>
+                      </div>
+                      <div className="code-section">
+                        <code>
+                          {` // Text Font Family`}
+                          <br />
+                          <br />
+                          {`//XML`}
+                          <br />
+                          {` android:fontFamily="sans-serif"  `}
+                          <br />
+                        </code>
+                      </div>
+                      <div className="code-section">
+                        <code>
+                          {`// Font Style`}
+                          <br />
+                          <br />
+                          {`//XML`}
+                          <br />
+                          {` android:textStyle="bold" `}
+                          {` android:textStyle="italic" `}
+                          {` android:textStyle="normal" `}
+                          <br />
+                          <br />
+                          {`//JAVA `}
+                          <br />
+                          {` tv.setTypeface(Typeface.DEFAULT_BOLD);  `}
+                          <br />
+                        </code>
+                      </div>
                   </Tab.Pane>
                   <Tab.Pane eventKey="eleven">
                     <h3 className="tab-seaction-heading">
@@ -2049,7 +2246,53 @@ const Blog = () => {
                     <p class="code-commend">// Example 
                     <br />
                     {`Toast.makeText(MainActivity.this,"Toast Example message",Toast.LENGTH_LONG).show(); `} </p>
-                    <p>CODE</p>
+                    <div className="code-section">
+                      <code>
+                        {` // Example }`}
+                        <br />
+                        <br />
+                        {` Toast.makeText(MainActivity.this,"Toast Example message",Toast.LENGTH_LONG).show(); `}
+                        <br />
+                      </code>
+                    </div>
+                    <div className="code-section">
+                        <code>
+                          {` // MainActivity.java }`}
+                          <br />
+                          <br />
+                          {` package com.androidaura.toast; `}
+                          <br />
+                          <br />
+                          {` import android.support.v7.app.AppCompatActivity; `}
+                          <br />
+                          {` import android.os.Bundle; `}
+                          <br />
+                          {` import android.widget.Toast; `}
+                          <br />
+                          <br />
+                          {` public class MainActivity extends AppCompatActivity { `}
+                          <br />
+                          {`setContentView(R.layout.activity_main);`}
+                          <br /> 
+                          <br /> 
+                          &nbsp; &nbsp;{` @Override `} 
+                          <br />
+                          &nbsp; &nbsp; {` protected void onCreate(Bundle savedInstanceState) { `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; { `super.onCreate(savedInstanceState);` }
+                          <br />
+                          &nbsp; &nbsp;&nbsp; { `setContentView(R.layout.activity_main);` }
+                          <br />
+                          <br />
+                          &nbsp; &nbsp; {` // Toast.makeText(context, text, duration).show(); `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp;{` Toast.makeText(MainActivity.this, "Toast is Displayed", Toast.LENGTH_SHORT).show(); `}
+                          <br />
+                          &nbsp;&nbsp;&nbsp;{ `}` }
+                          <br />
+                          { `}` }
+                        </code>
+                      </div>
                     <p class="blog-img">
                       <img src="asstes/image/toast.png" style={{ width: "auto" }} />
                     </p>
