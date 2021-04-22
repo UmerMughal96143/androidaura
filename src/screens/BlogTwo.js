@@ -229,6 +229,146 @@ function BlogTwo() {
                                         <img src={"asstes/image/FlastList.svg"}/> */}
                                         {/* <ReactSVG src="asstes/image/FlastList.svg" /> */}
                                         {/* <Jotaro /> */}
+                                        <div className="tab-emergence">
+                                            <div className="code-section">
+                                                <code>
+                                                    {` import React, { Component } from 'react'; `}
+                                                    <br />
+                                                    {` import {StyleSheet, FlatList, Text, View, Alert } from 'react-native'; `}
+                                                    <br />
+                                                    <br />
+                                                    {` export default class Dialphone extends Component { `}
+                                                    <br />    
+                                                    &nbsp; &nbsp;{` super(props); `}
+                                                    <br />
+                                                    <br />
+                                                    &nbsp; &nbsp;{` this.state = { `}
+                                                    <br />    
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;{` GridListItems: [ `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "1" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "2" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "3" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "4" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "5" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "6" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "7" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "8" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "9" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "+" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "0" }, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "x" }, `}
+                                                    <br />
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` ] `} 
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;{` }; `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` } `}
+                                                    <br />
+                                                    <br />
+                                                    {` GetItem(item) { `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` Alert.alert(item); `}
+                                                    <br />
+                                                    {` } `}
+                                                    <br />
+                                                    <br />
+                                                    {` render() { `}
+                                                    <br />
+                                                    &nbsp; {` return ( `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` <View style={styles.container}> `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp;&nbsp;{` <FlatList `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` data={ this.state.GridListItems } `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` renderItem={ ({item}) => `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` <View style={styles.GridContainer}> `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` <Text style={styles.GridTextLayout} onPress={this.GetItem.bind(this, item.key)} > {item.key} </Text> `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` </View> } `}
+                                                    <br />
+                                                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` numColumns={3} `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` /> `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` </View> `}
+                                                    <br />
+                                                    &nbsp;{` ); `}
+                                                    <br />
+                                                    {` } `}
+                                                    <br />
+                                                    <br />
+                                                    {` } `}
+                                                    <br />
+                                                    {` const styles = StyleSheet.create({ `}
+                                                    <br />
+                                                    {` container: { `}
+                                                    <br />  
+                                                    &nbsp; &nbsp;{` flex: 1, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` justifyContent: "center", `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` backgroundColor: "#e5e5e5", `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{`  margin:1 `}
+                                                    <br />
+                                                    {` }, `}
+                                                    <br />
+                                                    <br />
+                                                    {` GridContainer: { `}
+                                                    <br />  
+                                                    &nbsp; &nbsp;{`  flex:1, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` justifyContent: 'center', `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` alignItems: 'center', `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` height: 50, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` margin: 5, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` backgroundColor: '#0066ff' `}
+                                                    <br />
+                                                    {` }, `}
+                                                    <br />
+                                                    {` GridTextLayout: { `}
+                                                    <br />  
+                                                    &nbsp; &nbsp;{` fontSize: 20, `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` fontWeight: 'bold', `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` justifyContent: 'center', `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` color: '#fff', `}
+                                                    <br />
+                                                    &nbsp; &nbsp;{` padding: 10, `}
+                                                    <br />
+                                                    &nbsp; {` }, `}
+                                                    <br />
+                                                    {` }); `}
+                                                    <br />
+                                                </code>
+                                            </div>
+                                            <p className="blog-img">
+                                                <img src="asstes/image/RN-flatlist-1.png" style={{width : "auto"}} />
+                                            </p>
+                                        </div>
                                     </div>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="forth">
@@ -236,6 +376,144 @@ function BlogTwo() {
                                     <h3 className="tab-seaction-heading">React Native – Grid Layout</h3>
                                 </div>
                                 <div className="tab-emergence">
+                                    <div className="code-section">
+                                        <code>
+                                            {` import React, { Component } from 'react'; `}
+                                            <br />
+                                            {` import {StyleSheet, FlatList, Text, View, Alert } from 'react-native'; `}
+                                            <br />
+                                            <br />
+                                            {` export default class Dialphone extends Component { `}
+                                            <br />    
+                                            &nbsp; &nbsp;{` super(props); `}
+                                            <br />
+                                            <br />
+                                            &nbsp; &nbsp;{` this.state = { `}
+                                            <br />    
+                                            &nbsp; &nbsp;&nbsp; &nbsp;{` GridListItems: [ `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "1" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "2" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "3" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "4" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "5" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "6" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "7" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "8" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "9" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "+" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "0" }, `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` { key: "x" }, `}
+                                            <br />
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` ] `} 
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;{` }; `}
+                                            <br />
+                                            &nbsp; &nbsp;{` } `}
+                                            <br />
+                                            <br />
+                                            {` GetItem(item) { `}
+                                            <br />
+                                            &nbsp; &nbsp;{` Alert.alert(item); `}
+                                            <br />
+                                            {` } `}
+                                            <br />
+                                            <br />
+                                            {` render() { `}
+                                            <br />
+                                            &nbsp; {` return ( `}
+                                            <br />
+                                            &nbsp; &nbsp;{` <View style={styles.container}> `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp;&nbsp;{` <FlatList `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` data={ this.state.GridListItems } `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` renderItem={ ({item}) => `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` <View style={styles.GridContainer}> `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` <Text style={styles.GridTextLayout} onPress={this.GetItem.bind(this, item.key)} > {item.key} </Text> `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` </View> } `}
+                                            <br />
+                                            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` numColumns={3} `}
+                                            <br />
+                                            &nbsp; &nbsp;{` /> `}
+                                            <br />
+                                            &nbsp; &nbsp;{` </View> `}
+                                            <br />
+                                            &nbsp;{` ); `}
+                                            <br />
+                                            {` } `}
+                                            <br />
+                                            <br />
+                                            {` } `}
+                                            <br />
+                                            {` const styles = StyleSheet.create({ `}
+                                            <br />
+                                            {` container: { `}
+                                            <br />  
+                                            &nbsp; &nbsp;{` flex: 1, `}
+                                            <br />
+                                            &nbsp; &nbsp;{` justifyContent: "center", `}
+                                            <br />
+                                            &nbsp; &nbsp;{` backgroundColor: "#e5e5e5", `}
+                                            <br />
+                                            &nbsp; &nbsp;{`  margin:1 `}
+                                            <br />
+                                            {` }, `}
+                                            <br />
+                                            <br />
+                                            {` GridContainer: { `}
+                                            <br />  
+                                            &nbsp; &nbsp;{`  flex:1, `}
+                                            <br />
+                                            &nbsp; &nbsp;{` justifyContent: 'center', `}
+                                            <br />
+                                            &nbsp; &nbsp;{` alignItems: 'center', `}
+                                            <br />
+                                            &nbsp; &nbsp;{` height: 50, `}
+                                            <br />
+                                            &nbsp; &nbsp;{` margin: 5, `}
+                                            <br />
+                                            &nbsp; &nbsp;{` backgroundColor: '#0066ff' `}
+                                            <br />
+                                            {` }, `}
+                                            <br />
+                                            {` GridTextLayout: { `}
+                                            <br />  
+                                            &nbsp; &nbsp;{` fontSize: 20, `}
+                                            <br />
+                                            &nbsp; &nbsp;{` fontWeight: 'bold', `}
+                                            <br />
+                                            &nbsp; &nbsp;{` justifyContent: 'center', `}
+                                            <br />
+                                            &nbsp; &nbsp;{` color: '#fff', `}
+                                            <br />
+                                            &nbsp; &nbsp;{` padding: 10, `}
+                                            <br />
+                                            &nbsp; {` }, `}
+                                            <br />
+                                            {` }); `}
+                                            <br />
+                                        </code>
+                                    </div>
+                                    <p className="blog-img">
+                                        <img src="asstes/image/RN-grid-layout-1-169x300.png" style={{width : "auto"}} />
+                                    </p>
                                 </div>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fifth">

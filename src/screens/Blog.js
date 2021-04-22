@@ -2543,6 +2543,144 @@ const Blog = () => {
                           &nbsp; &nbsp; &nbsp;{`}); `}
                           <br />
                           {` } `}
+                          <br />
+                          <br />
+                          <br />
+                          {`private void showAlertDialog() {`}
+                          <br />
+                          &nbsp; &nbsp;{` final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this); `}
+                          <br />
+                          &nbsp; &nbsp;{` final View customLayout = getLayoutInflater().inflate(R.layout.custom_alert, null); `}
+                          <br />
+                          &nbsp; &nbsp;{` alertDialog.setView(customLayout); `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;{` final AlertDialog alert = alertDialog.create(); `}
+                          <br />
+                          &nbsp; &nbsp;{` alert.setCanceledOnTouchOutside(false); `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;{` Button submit = customLayout.findViewById(R.id.submit); `}
+                          <br />
+                          &nbsp; &nbsp;{` final EditText et = customLayout.findViewById(R.id.et); `}
+                          <br />
+                          <br />
+                          {` submit.setOnClickListener(new View.OnClickListener() { `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{` @Override `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{` public void onClick(View v) { `}
+                          <br />
+                          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;{` Toast.makeText(MainActivity.this, et.getText().toString(), Toast.LENGTH_LONG).show(); `}
+                          <br />
+                          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;{` alert.dismiss(); `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;{` } `}
+                          <br />
+                          &nbsp; &nbsp; &nbsp;{`}); `}
+                          <br />
+                          {` } `}
+                        </code>
+                      </div>
+                      <div className="code-section">
+                        <code>
+                          {` // activity_main.xml }`}
+                          <br />
+                          <br />
+                          {` <?xml version="1.0" encoding="utf-8"?> `}
+                          <br />
+                          {` <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` xmlns:app="http://schemas.android.com/apk/res-auto" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` xmlns:tools="http://schemas.android.com/tools" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` tools:context=".MainActivity"> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <Button `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/btn" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_gravity="center_vertical" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_marginLeft="100dp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_marginRight="100dp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:text="Custom Alert" /> `}
+                          <br />
+                          <br />
+                          {` </LinearLayout>  `}
+                        </code>
+                      </div>
+                      <div className="code-section">
+                        <code>
+                          {` // custom_alert.xml `}
+                          <br />
+                          <br />
+                          {` <?xml version="1.0" encoding="utf-8"?> `}
+                          <br />
+                          {` <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/ll_submitreport" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:focusable="true" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:focusableInTouchMode="true" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:orientation="vertical"> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <EditText `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/et" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{`  android:layout_margin="20dp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:hint="Enter text" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:textSize="22sp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:textStyle="bold" /> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <Button `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/submit" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_margin="20dp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:background="@color/colorOrange" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:text="Submit" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:textColor="@color/colorwhite" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:textSize="18sp" /> `}
+                          <br />
+                          <br />
+                          {` </LinearLayout>  `}
                         </code>
                       </div>
                       <p>
@@ -2625,7 +2763,67 @@ const Blog = () => {
                       <p>
                       Using the above-mentioned code, we have created a basic template of our project, placing the desired UI elements. So, of course, we have placed a Toggle Button in our project by using this code. Apart from that, we have also added a Toast message in our project that will appear after the user has interacted with Toggle Button. This Toast message is programmed to read, “Button is” followed by the current state name of the Toggle Button. After coding in your java class file, open the second file of your project, i.e. activity_main.xml, in order to add the following code in it:
                       </p>
-                      <p>CODE</p>
+                      <div className="code-section">
+                        <code>
+                          {` // custom_alert.xml `}
+                          <br />
+                          <br />
+                          {` <?xml version="1.0" encoding="utf-8"?> `}
+                          <br />
+                          {` <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/ll_submitreport" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:focusable="true" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:focusableInTouchMode="true" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` android:orientation="vertical"> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <EditText `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/et" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{`  android:layout_margin="20dp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:hint="Enter text" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:textSize="22sp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:textStyle="bold" /> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <Button `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/submit" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_margin="20dp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:background="@color/colorOrange" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:text="Submit" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:textColor="@color/colorwhite" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:textSize="18sp" /> `}
+                          <br />
+                          <br />
+                          {` </LinearLayout>  `}
+                        </code>
+                      </div>
                       <p>
                       With the help of this code, we have designed all our UI elements. First off, we have set the default of our Toggle Button as the “checked” state. Then, we have named the checked state “ON” and the unchecked state “OFF.” These names will appear after “Button is” in the Toast message. After entering all the codes in their respective files, your project will be good to go. Therefore, you will have to launch your project after that. Launching your project will show you the following output:
                       </p>
@@ -2694,7 +2892,38 @@ const Blog = () => {
                         <p>
                         After adding the code in your class file, open your activity_main.xml layout file to enter the following code in it:
                         </p>
-                        <p>CODE</p>
+                        <div className="code-section">
+                        <code>
+                          {` // activity_main.xml `}
+                          <br />
+                          <br />
+                          {` <?xml version="1.0" encoding="utf-8"?> `}
+                          <br />    
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <LinearLayout `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` xmlns:android="http://schemas.android.com/apk/res/android" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:gravity="center" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:orientation="vertical" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{`  android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="match_parent"> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <Spinner `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/spinner" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="100dp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="50dp"/> `}
+                          <br />
+                          <br />
+                          {` </LinearLayout>  `}
+                        </code>
+                      </div>
                         <p>
                         With this file, a developer is able to control the appearance of his application. Coding in this file allows him to add different UI elements in his project. The code above shows that we have used a couple of widgets so that our project can have some specific features, such as vertical orientation, centralized text, width & height of <b>spinner</b> and so on. First of all, we have used the LinearLayout widget in order to arrange the layout of our project as per our requirements. This widget is used with a vertical orientation so that all the contents of our project are arranged in a vertical order. Other than that, we have used the <b>Spinner</b> widget in order to obtain a drop down menu. Along with this widget, we have set the <b>spinner</b> characteristics, such as its 50 dp height and 100 dp width.
                         </p>
@@ -2743,9 +2972,59 @@ const Blog = () => {
                         By carefully reading this code, you will realize how important it is for our project. Since it is the first screen to appear in our project, it will not be wrong to say that this code basically runs or launches our project. No other additional activities can be performed without this code.
                         </p>
                         <p>Now, open your “activity_main.xml” layout file for UI designing, and type in the following code:</p>
-                        <p>
-                          CODE
-                        </p>
+                        <div className="code-section">
+                        <code>
+                          {` // activity_main.xml `}
+                          <br />
+                          {` <?xml version="1.0" encoding="utf-8"?> `}
+                          <br />    
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <LinearLayout `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` xmlns:android="http://schemas.android.com/apk/res/android" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:orientation="vertical"> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <TextView `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/textview" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_marginTop="50dp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:gravity="center" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:text="10" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:textSize="25sp" /> `}
+                          <br />
+
+
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <SeekBar `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/seekBar" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_marginTop="50dp" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:max="100" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:progress="10"/> `}
+                          <br />
+                          <br />
+                          {` </LinearLayout>  `}
+                        </code>
+                      </div>
                         <p>
                         If you read this code carefully, you will see that we have used a few widgets and added a few additional features to our project, such as centralized text, a maximum value of 100, text size of 25 sp and so on. First, we have used the “LinearLayout” widget with a vertical orientation. This means that all the contents of our project will be arranged vertically. In addition to that, we have used the “TextView” widget that will display all the text to the user of our project. Other than that, we have used the most important widget of our project and that is the “SeekBar” widget, which will add a seek bar to our project.
                         </p>
@@ -2807,9 +3086,51 @@ const Blog = () => {
                       </p>
                       <p>CODE</p>
                       <p>When you are done coding in your MainActivity.java class file, open the second file of your project, i.e. activity_main.xml layout file. After opening this file, add the following code in it:</p>
-                      <p>
-                        CODE
-                      </p>
+                      <div className="code-section">
+                        <code>
+                          {` // activity_main.xml `}
+                          <br />
+                          <br />
+                          {` <?xml version="1.0" encoding="utf-8"?> `}
+                          <br />    
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:gravity="center" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:orientation="vertical" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="match_parent" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="match_parent"> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <RatingBar `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/rating" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:saveEnabled="true" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:numStars="5"/> `}
+                          <br />
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;{` <Button `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:id="@+id/button" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_width="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{` android:layout_height="wrap_content" `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{`  android:text="Submit" /> `}
+                          <br />
+                          <br />
+                          {` </LinearLayout>  `}
+                        </code>
+                      </div>
                       <p>
                       After successfully entering both the above-mentioned codes in their respective files, you will be ready to launch your project and view the output. By using the codes we have shown, your output would look like the following illustration:
                       </p>
@@ -2874,13 +3195,29 @@ const Blog = () => {
                       <p>
                       After creating a new project property, open your project’s first file, i.e. the MainActivity.java class file, to add the following code it:
                       </p>
-                      <p>CODE</p>
+                      <p>CODE   dvvewrgebggiuhh</p>
                       <p>
                       After coding in the MainActivity file, open the second file of of your project. This is the strings.xml file where you will code to add some custom strings in your project, such as “Male” and “Female.” Now, enter the following code in the file:
                       </p>
-                      <p>
-                        CODE
-                      </p>
+                      <div className="code-section">
+                        <code>
+                          {` // strings.xml `}
+                          <br />
+                          <br />
+                          {` <resources> `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{` <string name="app_name">Radio</string> `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{` <string name="male">Male</string> `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{` <string name="female">Female</string> `}
+                          <br />
+                          &nbsp; &nbsp;&nbsp;{` <string name="display">Show Selected</string> `}
+                          <br />
+                          {` </resources> `}
+                          <br />
+                        </code>
+                      </div>
                       <p>
                       Once you’re done with entering all the above-mentioned codes in the right files, you will be able to launch your project. After launching your project, your output would look like the following image:
                       </p>
